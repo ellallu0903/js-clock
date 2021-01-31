@@ -1,6 +1,8 @@
-# 泰山職訓前端班時鐘作業
-發揮創意美化你上課完成的時鐘，並試著加入更多功能  
+##### 預覽：
 
-## 注意
-請盡量使用上課教的 GUI 工具或 git 指令繳交作業  
-若使用 GitHub 網頁進行 commit 會依次數扣分
+##### 連結：[clock](https://ellallu0903.github.io/js-clock/0915_HW_Clock-4)
+
+##### 圖片來源：
+
+- [首頁](https://candidlykeri.com/old-desktop-wallpapers 'Candidlykeri')
+- [背景圖 TW/JP/KR/TH](https://www.pexels.com/zh-tw/ 'Pexels')

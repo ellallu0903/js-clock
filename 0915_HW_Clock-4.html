@@ -36,8 +36,9 @@
       }
 
       body {
-        font-family: "Roboto Mono", monospace;
+        font-family: 'Roboto Mono', monospace;
         text-shadow: lightgray;
+        position: relative;
       }
 
       span {
@@ -121,7 +122,7 @@
       }
       /* 台北時鐘 */
       #clock {
-        font-family: "Monoton", cursive;
+        font-family: 'Monoton', cursive;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -182,7 +183,7 @@
       }
 
       #date {
-        font-family: "Londrina Shadow", cursive;
+        font-family: 'Londrina Shadow', cursive;
         display: inline-block;
         width: 400px;
         font-size: 72px;
@@ -233,7 +234,7 @@
 
       .timebox {
         display: inline-block;
-        font-family: "Chewy", cursive;
+        font-family: 'Chewy', cursive;
         width: 360px;
         font-size: 60px;
         background: rgba(255, 255, 255, 0.4);
@@ -250,7 +251,7 @@
 
       .timebox2 {
         /* display: inline-block; */
-        font-family: "Chewy", cursive;
+        font-family: 'Chewy', cursive;
         width: 400px;
         height: 150px;
         font-size: 70px;
@@ -259,9 +260,13 @@
         text-align: center;
         text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
         color: white;
-        position: relative;
+        /* position: relative;
         top: 400px;
-        left: 37%;
+        left: 37%; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         padding: 0.5rem 1rem;
         text-align: center;
         margin: 30px;
@@ -296,8 +301,9 @@
         height: 50px;
         position: relative;
         left: 45%;
-        top: 97%;
+        top: 100%;
         z-index: 999;
+        line-height: 50px;
       }
     </style>
   </head>
@@ -439,40 +445,40 @@
     </div>
 
     <script>
-      const date = document.getElementById("date");
-      const hour = document.getElementById("hour");
-      const minute = document.getElementById("minute");
-      const second = document.getElementById("second");
-      const time = document.getElementById("time");
-      const JP = document.getElementById("JP");
-      const KR = document.getElementById("KR");
-      const TL = document.getElementById("TL");
+      const date = document.getElementById('date')
+      const hour = document.getElementById('hour')
+      const minute = document.getElementById('minute')
+      const second = document.getElementById('second')
+      const time = document.getElementById('time')
+      const JP = document.getElementById('JP')
+      const KR = document.getElementById('KR')
+      const TL = document.getElementById('TL')
 
       //   為了解決進入頁面延遲一秒後才開始，先寫 function 後再用計時器
       const setClock = () => {
-        let now = new Date();
-        let h = now.getHours();
-        let m = now.getMinutes();
-        let s = now.getSeconds();
-        let year = now.getFullYear();
-        let month = now.getMonth();
-        let day = now.getDate();
+        let now = new Date()
+        let h = now.getHours()
+        let m = now.getMinutes()
+        let s = now.getSeconds()
+        let year = now.getFullYear()
+        let month = now.getMonth()
+        let day = now.getDate()
         // 台北時間
         // 360度 / 12小時 = 30度/小時，因為 0 度是水平，所以要再加 90度
-        hour.style.transform = `rotate(${h * 30 + 90}deg)`;
+        hour.style.transform = `rotate(${h * 30 + 90}deg)`
         // 360度 / 60分鐘 = 6度/分鐘
-        minute.style.transform = `rotate(${m * 6 + 90}deg)`;
+        minute.style.transform = `rotate(${m * 6 + 90}deg)`
         // 360度 / 60秒 = 6度/秒
-        second.style.transform = `rotate(${s * 6 + 90}deg)`;
-        date.innerText = `${year} / ${month} / ${day}`;
-        time.innerText = `  ${h} : ${m} : ${s}`;
-        JP.innerText = ` ${h + 1} : ${m} : ${s}`;
-        KR.innerText = ` ${h + 1} : ${m} : ${s}`;
-        TL.innerText = ` ${h - 1} : ${m} : ${s}`;
-      };
+        second.style.transform = `rotate(${s * 6 + 90}deg)`
+        date.innerText = `${year} / ${month} / ${day}`
+        time.innerText = `  ${h} : ${m} : ${s}`
+        JP.innerText = ` ${h + 1} : ${m} : ${s}`
+        KR.innerText = ` ${h + 1} : ${m} : ${s}`
+        TL.innerText = ` ${h - 1} : ${m} : ${s}`
+      }
 
-      setInterval(setClock, 1000);
-      setClock();
+      setInterval(setClock, 1000)
+      setClock()
     </script>
   </body>
 </html>

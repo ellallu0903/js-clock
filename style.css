@@ -5,7 +5,7 @@
 html,
 body {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   margin: 0;
   overflow: hidden;
 }
@@ -14,6 +14,7 @@ body {
   font-family: 'Roboto Mono', monospace;
   text-shadow: lightgray;
   position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .h-50 {
@@ -28,7 +29,7 @@ body {
   width: 100%;
 }
 
-.flex_start {
+.flex_center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,13 +46,13 @@ body {
 .flag_position {
   position: absolute;
   bottom: 1%;
-  left: 1%;
+  left: 2%;
 }
 
 .github_position {
   position: absolute;
   bottom: 1%;
-  right: 1%;
+  right: 2%;
 }
 
 .github_position:hover {
@@ -204,10 +205,6 @@ body {
   border-radius: 15px;
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   color: white;
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   padding: 0.5rem 1rem;
 }
 
@@ -218,8 +215,25 @@ body {
   transform: scale(1.05);
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .copyright {
-    left: 65%;
+    display: none;
+  }
+
+  .timebox,
+  .timebox2 {
+    width: 50%;
+    font-size: 30px;
+    padding: 0.5rem 1rem;
+    text-align: center;
+  }
+  .timebox img,
+  .timebox2 img {
+    width: 30px;
+  }
+
+  #date {
+    font-size: 50px;
+    text-align: center;
   }
 }

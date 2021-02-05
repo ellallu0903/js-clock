@@ -236,4 +236,8 @@ body {
     font-size: 50px;
     text-align: center;
   }
+
+  #clock {
+    display: none;
+  }
 }

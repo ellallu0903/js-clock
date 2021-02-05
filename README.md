@@ -1,8 +1,9 @@
-##### 預覽：
+### 預覽：
 
-##### 連結：[clock](https://ellallu0903.github.io/js-clock/0915_HW_Clock-4)
+![Clock ⏰](https://i.imgur.com/0hJV7eK.png)
 
-##### 圖片來源：
+### DEMO：[Clock ⏰](https://ellallu0903.github.io/js-clock/0915_HW_Clock-4.html)
 
-- [首頁](https://candidlykeri.com/old-desktop-wallpapers 'Candidlykeri')
-- [背景圖 TW/JP/KR/TH](https://www.pexels.com/zh-tw/ 'Pexels')
+### 圖片來源：
+
+- 背景圖 TW/JP/KR/TH－[🔗 Pexels](https://www.pexels.com/zh-tw/)
